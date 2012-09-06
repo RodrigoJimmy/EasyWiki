@@ -4,7 +4,7 @@
 <? foreach($this->posts as $post): ?>
     <tr>
         <td><? echo $post->title; ?></td>
-        <td><? echo $post->content; ?></td>
+        <td><? echo substr($post->content, 0, 50) . "..."; ?></td>
         <td><? echo $post->created; ?></td>
         <td><a class="btn btn-small" href="#"><i class="icon-pencil"></i></a></td>
         <td><a class="btn btn-small" href="#"><i class="icon-trash"></i></a></td>
