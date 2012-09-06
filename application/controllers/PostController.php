@@ -72,8 +72,16 @@ class PostController extends Zend_Controller_Action
     {
         $post = new Application_Model_Post();
         $id = $this->_getParam('id');
-        $post->delete("id = $id");
-        $this->_redirect('/post/list');
+        if($this->_getParam('confirm')){        
+            $post->delete("id = $id");
+            $this->_redirect('/post/list');
+        }else{
+            $form = new Application_Form_Post();
+            $post = $post->fetchRow("id = $id")->toArray();
+            $form->populate($post);
+            $form->removeElement("submit");
+            $this->view->form = $form;
+        }
     }
 
 
