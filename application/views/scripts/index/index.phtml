@@ -11,7 +11,7 @@
         <div class="span4">
             <h2><? echo $post->title; ?></h2>
             <p><? echo substr($post->content, 0, 50) . "..."; ?></p>
-            <p><a class="btn" href="#">Ler mais &raquo;</a></p>
+            <p><a class="btn" href="/post/show/id/<? echo $post->id; ?>">Ler mais &raquo;</a></p>
         </div>
 
     <? endforeach; ?>
