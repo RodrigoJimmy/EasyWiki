@@ -68,8 +68,18 @@ class PostController extends Zend_Controller_Action
         $this->view->form = $form;
     }
 
+    public function deleteAction()
+    {
+        $post = new Application_Model_Post();
+        $id = $this->_getParam('id');
+        $post->delete("id = $id");
+        $this->_redirect('/post/list');
+    }
+
 
 }
+
+
 
 
 
