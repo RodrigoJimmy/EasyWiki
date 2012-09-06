@@ -4,3 +4,7 @@ README.txt
 demos/
 extras/documentation
 
+/nbproject/private/
+nbproject/project.properties
+
+nbproject/project.xml
