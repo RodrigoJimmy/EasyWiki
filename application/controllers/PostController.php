@@ -43,8 +43,35 @@ class PostController extends Zend_Controller_Action
         $this->view->form = $form;
     }
 
+    public function updateAction()
+    {
+        $form = new Application_Form_Post;
+        $form->setAction('/post/update');
+        $form->submit->setLabel('Update');
+        $posts = new Application_Model_Post();
+        
+        if($this->_request->isPost()) {
+            if($form->isValid($this->_request->getPost())) {
+                $values = $form->getValues();
+                $posts->update($values, 'id = ' . $values['id']);
+                
+                $this->_redirect('/post/list');
+            } else {
+                $form->populate($form->getValues());
+            }
+        } else {
+            $id = $this->_getParam('id');
+            $post = $posts->fetchRow("id = $id")->toArray();
+            $form->populate($post);
+        }
+        
+        $this->view->form = $form;
+    }
+
 
 }
+
+
 
 
 
