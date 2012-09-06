@@ -29,7 +29,18 @@ class PostController extends Zend_Controller_Action
 
     public function createAction()
     {
-        $this->view->form = new Application_Form_Post();
+        $form = new Application_Form_Post();
+        $post = new Application_Model_Post();
+        
+        if($this->_request->isPost()) {
+            if($form->isValid($this->_request->getPost())) {
+                $id = $post->insert($form->getValues());
+                $this->_redirect('post/list');
+            } else {
+                $form->populate($form->getValues());
+            }
+        }
+        $this->view->form = $form;
     }
 
 

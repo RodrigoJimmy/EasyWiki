@@ -21,8 +21,11 @@ class Application_Model_Post
             $select->$k($v);
         }
         
-        
         return $this->_table->fetchAll($select);
+    }
+    
+    public function insert($data) {
+        return $this->_table->insert($data);
     }
 }
 
