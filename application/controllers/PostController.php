@@ -15,7 +15,10 @@ class PostController extends Zend_Controller_Action
 
     public function getAction()
     {
-        // action body
+        if($this->_getParam($id)) {
+            $post = new Application_Model_Post();
+            $this->view->post = $post->getPost($this->_getParam('id'));
+        }
     }
 
 
