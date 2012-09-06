@@ -12,5 +12,9 @@ class Application_Model_Post
         return $this->_table->find($id)->current();
     }
 
+    public function getAll() {
+        $select = $this->_table->select();
+        return $this->_table->fetchAll($select);
+    }
 }
 
