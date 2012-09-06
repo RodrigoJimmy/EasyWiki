@@ -19,6 +19,7 @@
         <dbTableDirectory>
           <dbTableFile dbTableName="Post"/>
         </dbTableDirectory>
+        <modelFile modelName="Post"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
