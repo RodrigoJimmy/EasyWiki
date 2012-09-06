@@ -86,8 +86,18 @@ class PostController extends Zend_Controller_Action
         }
     }
 
+    public function showAction()
+    {
+        $post = new Application_Model_Post();
+        $id = $this->_getParam('id');
+        $this->view->post = $post->fetchRow("id = $id");
+        
+    }
+
 
 }
+
+
 
 
 
