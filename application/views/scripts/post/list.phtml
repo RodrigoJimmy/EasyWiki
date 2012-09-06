@@ -8,7 +8,7 @@
 <table class="table table-hover">   
     <? foreach ($this->posts as $post): ?>
         <tr>
-            <td><? echo $post->title; ?></td>
+            <td><? echo substr($post->title, 0, 30); ?></td>
             <td><? echo substr($post->content, 0, 50) . "..."; ?></td>
             <td><? echo $post->created; ?></td>
             <td><a class="btn btn-small" href="/post/update/id/<? echo $post->id; ?>"><i class="icon-pencil"></i></a></td>
