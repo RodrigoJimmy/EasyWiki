@@ -13,10 +13,21 @@
         </style>
     </head>
     <body>
+        
         <? echo $this->render('main_menu.phtml'); ?>
-
+       
         <div class="container">
-
+            <?php
+            $session = Zend_Registry::get('session');
+            if(isset($session->erro)) {
+                echo "<div class='alert alert-error'>
+                        $session->erro
+                        <button type='button' class='close' data-dismiss='alert'>×</button>
+                      </div>";
+                unset($session->erro);
+            }
+            ?>
+            
             <?php echo $this->layout()->content; ?>
             <footer>
                 <hr>    
@@ -25,6 +36,8 @@
         </div>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="/js/bootstrap.min.js"></script>
+        <script>$(".alert").alert('teste')</script>
+        
     </body>
 </html>
 
