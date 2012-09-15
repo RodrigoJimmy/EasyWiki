@@ -14,7 +14,6 @@
         <controllerFile controllerName="Error"/>
         <controllerFile controllerName="Post">
           <actionMethod actionName="index"/>
-          <actionMethod actionName="get"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
@@ -36,9 +35,6 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Post">
             <viewScriptFile forActionName="index"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Post">
-            <viewScriptFile forActionName="get"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
