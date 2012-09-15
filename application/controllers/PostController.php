@@ -27,15 +27,8 @@ class PostController extends Zend_Controller_Action
         $this->view->posts = $posts->getAll(array('order' => 'created DESC'));
     }
 
-    public function createAction()
-    {
-        $this->view->form = new Application_Form_Post();
-    }
-
 
 }
-
-
 
 
 
