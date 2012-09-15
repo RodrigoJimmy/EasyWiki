@@ -11,7 +11,6 @@
             <td><? echo substr($post->title, 0, 30); ?></td>
             <td><? echo substr($post->content, 0, 50) . "..."; ?></td>
             <td><? echo $post->created; ?></td>
-            <td><a class="btn btn-small" href="/post/show/id/<? echo $post->id; ?>"><i class="icon-search"></i></a></td>
             <td><a class="btn btn-small" href="/post/update/id/<? echo $post->id; ?>"><i class="icon-pencil"></i></a></td>
             <td><a class="btn btn-small" href="/post/delete/id/<? echo $post->id; ?>"><i class="icon-trash"></i></a></td>
         </tr>
