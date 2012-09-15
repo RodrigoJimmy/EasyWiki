@@ -16,5 +16,9 @@ class Application_Model_Post
         $select = $this->_table->select();
         return $this->_table->fetchAll($select);
     }
+    
+    public function insert($data) {
+        return $this->_table->insert($data);
+    }
 }
 
