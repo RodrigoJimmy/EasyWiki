@@ -9,7 +9,7 @@
 <div class="row">
     <? foreach ($this->posts as $post): ?>
         <div class="span4">
-            <h3><? echo substr($post->title, 0, 20); ?></h3>
+            <h2><? echo $post->title; ?></h2>
             <p><? echo substr($post->content, 0, 50) . "..."; ?></p>
             <p><a class="btn" href="/post/show/id/<? echo $post->id; ?>">Ler mais &raquo;</a></p>
         </div>
