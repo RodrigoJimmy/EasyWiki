@@ -18,11 +18,7 @@
         </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
-      <layoutsDirectory>
-        <layoutScriptsDirectory>
-          <layoutScriptFile layoutName="layout"/>
-        </layoutScriptsDirectory>
-      </layoutsDirectory>
+      <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <dbTableDirectory>
           <dbTableFile dbTableName="Post"/>
