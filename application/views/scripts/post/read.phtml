@@ -1,5 +1,6 @@
 <? foreach ($this->posts as $post): ?>
-<? echo $post->title; ?>
-<? echo $post->content; ?>
-<? echo $post->created; ?>
+ID: <? echo $post->id; ?> <br />
+Title: <? echo $post->title; ?> <br />
+Content: <? echo $post->content; ?> <br />
+Created: <? echo $post->created; ?> <br />
 <? endforeach; ?>
