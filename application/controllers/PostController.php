@@ -21,16 +21,8 @@ class PostController extends Zend_Controller_Action
         }
     }
 
-    public function listAction()
-    {
-        $posts = new Application_Model_Post();
-        $this->view->posts = $posts->getAll(array('order' => 'created DESC'));
-    }
-
 
 }
-
-
 
 
 
