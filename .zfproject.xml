@@ -17,7 +17,6 @@
           <actionMethod actionName="get"/>
           <actionMethod actionName="list"/>
           <actionMethod actionName="create"/>
-          <actionMethod actionName="update"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -54,9 +53,6 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Post">
             <viewScriptFile forActionName="create"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Post">
-            <viewScriptFile forActionName="update"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
