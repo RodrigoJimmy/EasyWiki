@@ -1,7 +1,7 @@
 <h1>Posts</h1>
 
 <div class="span1 offset11">
-    <a class="btn btn-small btn-primary" href="/post/create">Novo</a>
+    <a class="btn btn-small btn-primary" href="#">Novo</a>
 </div>
 &nbsp;
 
@@ -11,8 +11,8 @@
             <td><? echo $post->title; ?></td>
             <td><? echo substr($post->content, 0, 50) . "..."; ?></td>
             <td><? echo $post->created; ?></td>
-            <td><a class="btn btn-small" href="/post/update/id/<? echo $post->id; ?>"><i class="icon-pencil"></i></a></td>
-            <td><a class="btn btn-small" href="/post/delete/id/<? echo $post->id; ?>"><i class="icon-trash"></i></a></td>
+            <td><a class="btn btn-small" href="#"><i class="icon-pencil"></i></a></td>
+            <td><a class="btn btn-small" href="#"><i class="icon-trash"></i></a></td>
         </tr>
     <? endforeach; ?>
 </table>
