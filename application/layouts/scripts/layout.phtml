@@ -1,1 +1,29 @@
-<?php echo $this->layout()->content; ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EasyWiki</title>
+        <!-- Bootstrap -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <? echo $this->render('main_menu.phtml'); ?>
+       
+        <div class="container">
+            
+            <?php echo $this->layout()->content; ?>
+            
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script>$(".alert").alert('teste')</script>
+        
+    </body>
+</html>
