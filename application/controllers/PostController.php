@@ -80,8 +80,6 @@ class PostController extends Zend_Controller_Action
             $post = $post->fetchRow("id = $id")->toArray();
             $form->populate($post);
             $form->removeElement("submit");
-            $form->getElement('title')->setAttrib('disabled', 'disabled');
-            $form->getElement('content')->setAttrib('disabled', 'disabled');
             $this->view->form = $form;
         }
     }
