@@ -1,11 +1,11 @@
 <?php
 
-class PostController extends Easywiki_Controller_Action
+class PostController extends Zend_Controller_Action
 {
 
     public function init()
     {
-        parent::init();
+        /* Initialize action controller here */
     }
 
     public function indexAction()

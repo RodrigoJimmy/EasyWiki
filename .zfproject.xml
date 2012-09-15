@@ -21,13 +21,9 @@
           <actionMethod actionName="delete"/>
           <actionMethod actionName="show"/>
         </controllerFile>
-        <controllerFile controllerName="Auth">
-          <actionMethod actionName="index"/>
-        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Post"/>
-        <formFile formName="Login"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -69,9 +65,6 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Post">
             <viewScriptFile forActionName="show"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Auth">
-            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
