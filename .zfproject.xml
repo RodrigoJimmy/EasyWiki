@@ -19,7 +19,6 @@
           <actionMethod actionName="create"/>
           <actionMethod actionName="update"/>
           <actionMethod actionName="delete"/>
-          <actionMethod actionName="show"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -62,9 +61,6 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Post">
             <viewScriptFile forActionName="delete"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Post">
-            <viewScriptFile forActionName="show"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
