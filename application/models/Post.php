@@ -12,16 +12,8 @@ class Application_Model_Post
         return $this->_table->find($id)->current();
     }
 
-    public function getAll($criterio = array()) {
+    public function getAll() {
         $select = $this->_table->select();
-        
-        //$criterio = array('limit' => 3), entao
-        //$select->limit(2);
-        foreach($criterio as $k => $v) {
-            $select->$k($v);
-        }
-        
-        
         return $this->_table->fetchAll($select);
     }
 }

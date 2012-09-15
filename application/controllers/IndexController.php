@@ -11,7 +11,7 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $posts = new Application_Model_Post();
-        $this->view->posts = $posts->getAll(array('limit' => 3));
+        $this->view->posts = $posts->getAll();
     }
 
 
