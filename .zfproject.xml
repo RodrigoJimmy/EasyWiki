@@ -15,11 +15,7 @@
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
-      <modelsDirectory>
-        <dbTableDirectory>
-          <dbTableFile dbTableName="Post"/>
-        </dbTableDirectory>
-      </modelsDirectory>
+      <modelsDirectory/>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
