@@ -22,5 +22,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Registry::set('db', $db);
     }
     
+    public function _initLoader()
+    {
+        $loader = Zend_Loader_Autoloader::getInstance();
+        $loader->registerNamespace("Easywiki_");
+    }
 }
 
