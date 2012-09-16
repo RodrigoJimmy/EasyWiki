@@ -25,5 +25,9 @@ class Application_Model_Post
         return $this->_table->update($data, $id);
     }
     
+    public function delete($id) {
+        return $this->_table->delete($id);
+    }
+    
 }
 

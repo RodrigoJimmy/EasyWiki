@@ -61,7 +61,20 @@ class PostController extends Zend_Controller_Action {
     }
 
     public function deleteAction() {
-        // action body
+        $post = new Application_Model_Post();
+        $id = $this->_getParam('id');
+        if ($this->_getParam('confirm')) {
+            $post->delete("id = $id");
+            $this->_redirect('/');
+        } else {
+            $form = new Application_Form_Post();
+            $post = $post->getPost($id)->current()->toArray();
+            $form->populate($post);
+            $form->removeElement("submit");
+            $form->getElement('title')->setAttrib('disabled', 'disabled');
+            $form->getElement('content')->setAttrib('disabled', 'disabled');
+            $this->view->form = $form;
+        }
     }
 
 }
