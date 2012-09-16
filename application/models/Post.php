@@ -20,5 +20,10 @@ class Application_Model_Post
     public function insert($data) {
         return $this->_table->insert($data);
     }
+    
+    public function update($data, $id) {
+        return $this->_table->update($data, $id);
+    }
+    
 }
 
