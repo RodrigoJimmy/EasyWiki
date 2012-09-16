@@ -24,10 +24,15 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="send"/>
         </controllerFile>
+        <controllerFile controllerName="Auth">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="login"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Post"/>
         <formFile formName="Contact"/>
+        <formFile formName="Login"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -72,6 +77,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Contact">
             <viewScriptFile forActionName="send"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="login"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

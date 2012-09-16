@@ -11,6 +11,16 @@
                 <ul class="nav">
                     <li><a href="/post/list">Artigos</a></li>
                     <li><a href="/contact">Contato</a></li>
+                    <li>
+                <?
+                    $auth = Zend_Auth::getInstance();
+                    if ($auth->hasIdentity()) {
+                        echo "<a href=/auth/logout>Logout</a>";
+                    } else {
+                        echo "<a href=/auth/login>Login</a>";
+                    } 
+                ?>
+                    </li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
