@@ -1,16 +1,20 @@
 <?php
 
-class PostController extends Zend_Controller_Action {
+class PostController extends Zend_Controller_Action
+{
 
-    public function init() {
+    public function init()
+    {
         /* Initialize action controller here */
     }
 
-    public function indexAction() {
+    public function indexAction()
+    {
         // action body
     }
 
-    public function createAction() {
+    public function createAction()
+    {
         $form = new Application_Form_Post();
         $post = new Application_Model_Post();
 
@@ -25,7 +29,8 @@ class PostController extends Zend_Controller_Action {
         $this->view->form = $form;
     }
 
-    public function readAction() {
+    public function readAction()
+    {
         $post = new Application_Model_Post;
         $id = $this->_getParam('id');
 
@@ -36,7 +41,8 @@ class PostController extends Zend_Controller_Action {
         }
     }
 
-    public function updateAction() {
+    public function updateAction()
+    {
         $form = new Application_Form_Post;
         $form->setAction('/post/update');
         $form->submit->setLabel('Update');
@@ -60,7 +66,8 @@ class PostController extends Zend_Controller_Action {
         $this->view->form = $form;
     }
 
-    public function deleteAction() {
+    public function deleteAction()
+    {
         $post = new Application_Model_Post();
         $id = $this->_getParam('id');
         if ($this->_getParam('confirm')) {
@@ -77,5 +84,14 @@ class PostController extends Zend_Controller_Action {
         }
     }
 
+    public function listAction()
+    {
+        $post = new Application_Model_Post();
+        $this->view->posts = $post->getAll(array('order' => 'created DESC'));
+    }
+
+
 }
+
+
 
