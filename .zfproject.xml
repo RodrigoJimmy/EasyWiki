@@ -20,9 +20,14 @@
           <actionMethod actionName="delete"/>
           <actionMethod actionName="list"/>
         </controllerFile>
+        <controllerFile controllerName="Contact">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="send"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Post"/>
+        <formFile formName="Contact"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -61,6 +66,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Post">
             <viewScriptFile forActionName="list"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Contact">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Contact">
+            <viewScriptFile forActionName="send"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
