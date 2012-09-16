@@ -16,6 +16,7 @@ class ContactController extends Zend_Controller_Action
     public function sendAction()
     {
         $form = new Application_Form_Contact();
+        $session = Zend_Registry::get('session');
         if($this->_request->isPost()) {
             if($form->isValid($this->_request->getPost())) {
                 /* envia email */
@@ -45,10 +46,11 @@ class ContactController extends Zend_Controller_Action
                     $mail->setBodyText($mensagem);
                     $mail->send($mailTransport);
                     
+                    $session->success[] = "Email enviado com sucesso";
             } catch (Exception $e) {
-                print $erro = $e->getMessage();
+                $session->errors[] = $e->getMessage();
             }
-            
+            $this->redirect('/contact');
                 
                 
             } else {

@@ -17,10 +17,11 @@ class PostController extends Zend_Controller_Action
     {
         $form = new Application_Form_Post();
         $post = new Application_Model_Post();
-
+        $session = Zend_Registry::get('session');
         if ($this->_request->isPost()) {
             if ($form->isValid($this->_request->getPost())) {
                 $id = $post->insert($form->getValues());
+                $session->success[] = 'Post cadastrado';
                 $this->_redirect('/');
             } else {
                 $form->populate($form->getValues);
@@ -47,12 +48,14 @@ class PostController extends Zend_Controller_Action
         $form->setAction('/post/update');
         $form->submit->setLabel('Update');
         $post = new Application_Model_Post();
+        $session = Zend_Registry::get('session');
+
 
         if ($this->_request->isPost()) {
             if ($form->isValid($this->_request->getPost())) {
                 $values = $form->getValues();
                 $post->update($values, 'id = ' . $values['id']);
-
+                $session->success[] = "Post atualizado";
                 $this->_redirect('/');
             } else {
                 $form->populate($form->getValues());
@@ -70,10 +73,13 @@ class PostController extends Zend_Controller_Action
     {
         $post = new Application_Model_Post();
         $id = $this->_getParam('id');
+        $session = Zend_Registry::get('session');
+
         if ($this->_getParam('confirm')) {
             $post->delete("id = $id");
             $this->_redirect('/');
         } else {
+            $session->warnings[] = "Tem certeza que deseja remover este post?";
             $form = new Application_Form_Post();
             $post = $post->getPost($id)->current()->toArray();
             $form->populate($post);

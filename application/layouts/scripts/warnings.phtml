@@ -1,0 +1,12 @@
+<?
+$session = Zend_Registry::get('session');
+foreach($session->warnings as $warning) {
+echo "
+<div class='alert alert-block'>
+    $warning
+    <button type='button' class='close' data-dismiss='alert'>×</button>
+</div>";
+}
+unset($session->warnings);
+
+?>

@@ -17,7 +17,17 @@
         <? echo $this->render('main_menu.phtml'); ?>
        
         <div class="container">
-            
+        <? /* Mensagens */
+        $session = Zend_Registry::get('session');
+        if(isset($session->errors)) {
+            echo $this->render('errors.phtml');
+        }elseif(isset($session->warnings)) {
+            echo $this->render('warnings.phtml');
+        }elseif(isset($session->success)) {
+            echo $this->render('success.phtml');
+        }
+        /* end mensagens */
+        ?>
             <?php echo $this->layout()->content; ?>
 
         <? echo $this->render('footer.phtml'); ?>            
