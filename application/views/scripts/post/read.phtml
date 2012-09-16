@@ -1,6 +1,6 @@
-<? foreach ($this->posts as $post): ?>
-ID: <? echo $post->id; ?> <br />
-Title: <? echo $post->title; ?> <br />
-Content: <? echo $post->content; ?> <br />
-Created: <? echo $post->created; ?> <br />
-<? endforeach; ?>
+<h2><?php echo $this->post->title; ?></h2>
+<blockquote>
+  <p><?php echo $this->post->content; ?></p>
+  <small>Someone famous <cite title="Source Title"><?php echo $this->post->created; ?></cite></small>
+</blockquote>
+<a class="btn btn-small btn-primary" href="/"">Voltar</a>

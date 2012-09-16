@@ -30,7 +30,7 @@ class PostController extends Zend_Controller_Action {
         $id = $this->_getParam('id');
 
         if ($id) {
-            $this->view->posts = $post->getPost($id);
+            $this->view->post = $post->getPost($id)->current();
         } else {
             $this->view->posts = $post->getAll();
         }
